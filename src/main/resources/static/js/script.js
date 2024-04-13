@@ -7,7 +7,9 @@ document.addEventListener('DOMContentLoaded', function() {
 function setupEndpointLinks() {
     const endpoints = [
         { name: 'Appointments', method: 'GET', path: '/api/appointments' },
+        { name: 'Caretaker Login', method: 'POST', path: '/api/caretakers/login' },
         { name: 'Caretaker Register', method: 'POST', path: '/api/caretakers/register' },
+        { name: 'Dog Owner Login', method: 'POST', path: '/api/dogowners/login' },
         { name: 'Dog Owner Register', method: 'POST', path: '/api/dogowners/register' },
         { name: 'Support Inquiry', method: 'GET', path: '/api/support/{id}' }  // Assumes dynamic ID input is required
     ];
