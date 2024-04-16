@@ -34,5 +34,14 @@ public class EventController {
         Event event = eventService.findEventById(id);
         return ResponseEntity.ok(event);
     }
-}
 
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> deleteEvent(@PathVariable String id) {
+        try {
+            eventService.deleteEvent(id);
+            return ResponseEntity.ok().build(); // Respond with a 200 OK if successful
+        } catch (RuntimeException e) {
+            return ResponseEntity.notFound().build(); // Respond with a 404 Not Found if the event does not exist
+        }
+    }
+}

@@ -2,6 +2,7 @@ package com.example.capstone.controller;
 
 import com.example.capstone.dto.AvailabilityDto;
 import com.example.capstone.dto.CaretakerDto;
+import com.example.capstone.dto.PasswordChangeDto;
 import com.example.capstone.dto.ResetPasswordDto;
 import com.example.capstone.model.Availability;
 import com.example.capstone.model.Caretaker;

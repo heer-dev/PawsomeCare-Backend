@@ -26,5 +26,9 @@ public class EventService {
     public Event findEventById(String id) {
         return eventRepository.findById(id).orElseThrow(() -> new RuntimeException("Event not found"));
     }
-}
 
+    public void deleteEvent(String id) {
+        Event event = findEventById(id); // Re-use the existing method to find an event
+        eventRepository.delete(event);
+    }
+}

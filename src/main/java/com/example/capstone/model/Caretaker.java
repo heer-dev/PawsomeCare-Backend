@@ -20,11 +20,12 @@ public class Caretaker {
     private String awards;
     private String resetToken;
     private LocalDateTime tokenExpiryDate;
+    private boolean isActive=true;
 
     public Caretaker() {
     }
 
-    public Caretaker(String id, String firstName, String lastName, String email, String password, String phone, String photo, String aboutMe, int yearsOfExperience, String awards, String resetToken, LocalDateTime tokenExpiryDate) {
+    public Caretaker(String id, String firstName, String lastName, String email, String password, String phone, String photo, String aboutMe, int yearsOfExperience, String awards, String resetToken, LocalDateTime tokenExpiryDate, boolean isActive) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -37,6 +38,7 @@ public class Caretaker {
         this.awards = awards;
         this.resetToken = resetToken;
         this.tokenExpiryDate = tokenExpiryDate;
+        this.isActive = isActive;
     }
 
     public String getId() {
@@ -133,5 +135,13 @@ public class Caretaker {
 
     public void setTokenExpiryDate(LocalDateTime tokenExpiryDate) {
         this.tokenExpiryDate = tokenExpiryDate;
+    }
+
+    public boolean isActive() {
+        return isActive;
+    }
+
+    public void setActive(boolean active) {
+        isActive = active;
     }
 }

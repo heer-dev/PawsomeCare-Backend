@@ -1,5 +1,6 @@
 package com.example.capstone.service;
 
+import com.example.capstone.repository.SupportInquiryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.SimpleMailMessage;
@@ -21,5 +22,6 @@ public class EmailService {
 
         mailSender.send(message);
     }
+
 }
 

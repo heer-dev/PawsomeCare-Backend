@@ -5,9 +5,14 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
+import java.util.stream.Stream;
 
 @Repository
 public interface DogOwnerRepository extends MongoRepository<DogOwner, String> {
     Optional<DogOwner> findById(String id);
-    Optional<DogOwner> findByEmail(String email); // Custom query method to find a DogOwner by email
+    Optional<DogOwner>findByEmail(String email);
+    Optional<DogOwner> findByResetToken(String resetToken);
+    Stream<DogOwner> findByIdContainingOrFirstNameContainingOrLastNameContaining(String id, String firstName, String lastName);
+
+
 }

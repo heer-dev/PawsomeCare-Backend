@@ -1,6 +1,6 @@
 package com.example.capstone.service;
 
-import com.example.capstone.controller.PasswordChangeDto;
+import com.example.capstone.dto.PasswordChangeDto;
 import com.example.capstone.model.Caretaker;
 import com.example.capstone.repository.CaretakerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -82,13 +82,11 @@ public class CaretakerService {
         caretaker.setTokenExpiryDate(LocalDateTime.now().plusHours(1)); // Token valid for 1 hour
         caretakerRepository.save(caretaker);
 
-        // TODO: Send the token to the user's email
-        // ...
         emailService.sendPasswordResetEmail(caretaker.getEmail(), resetToken);
-
 
         return ResponseEntity.ok("Password reset email sent.");
     }
+
 
 
 
@@ -166,6 +164,10 @@ public class CaretakerService {
     }
     public List<Caretaker> getAllCaretakers() {
         return caretakerRepository.findAll();
+    }
+
+    public long countAllCaretakers() {
+        return caretakerRepository.count();
     }
 
 }

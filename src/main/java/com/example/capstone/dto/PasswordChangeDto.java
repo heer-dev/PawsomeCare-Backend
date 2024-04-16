@@ -1,4 +1,4 @@
-package com.example.capstone.controller;
+package com.example.capstone.dto;
 
 public class PasswordChangeDto {
     private String oldPassword;
