@@ -10,4 +10,5 @@ import java.util.Optional;
 public interface CaretakerRepository extends MongoRepository<Caretaker, String> {
     Optional<Caretaker> findById(String id);
     Optional<Caretaker> findByEmail(String email);
+    Optional<Caretaker> findByResetToken(String resetToken);
 }
