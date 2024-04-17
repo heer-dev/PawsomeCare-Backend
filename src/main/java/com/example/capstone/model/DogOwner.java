@@ -14,13 +14,17 @@ public class DogOwner {
     private String phone;
     private String photo; // Optional
     private String resetToken;
+    private String dogName;
+
+    private String aboutDog;
+
     private LocalDateTime tokenExpiryDate;
     private boolean isActive=true;
 
     public DogOwner() {
     }
 
-    public DogOwner(String id, String firstName, String lastName, String email, String password, String phone, String photo, String resetToken, LocalDateTime tokenExpiryDate, boolean isActive) {
+    public DogOwner(String id, String firstName, String lastName, String email, String password, String phone, String photo, String resetToken, String dogName, String aboutDog, LocalDateTime tokenExpiryDate, boolean isActive) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -29,6 +33,8 @@ public class DogOwner {
         this.phone = phone;
         this.photo = photo;
         this.resetToken = resetToken;
+        this.dogName = dogName;
+        this.aboutDog = aboutDog;
         this.tokenExpiryDate = tokenExpiryDate;
         this.isActive = isActive;
     }
@@ -110,5 +116,21 @@ public class DogOwner {
 
     public void setActive(boolean active) {
         isActive = active;
+    }
+
+    public String getDogName() {
+        return dogName;
+    }
+
+    public void setDogName(String dogName) {
+        this.dogName = dogName;
+    }
+
+    public String getAboutDog() {
+        return aboutDog;
+    }
+
+    public void setAboutDog(String aboutDog) {
+        this.aboutDog = aboutDog;
     }
 }

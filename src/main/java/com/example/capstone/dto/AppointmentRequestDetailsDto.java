@@ -17,4 +17,28 @@ public class AppointmentRequestDetailsDto {
     }
 
     // Getters and Setters
+
+    public AppointmentRequest getAppointmentRequest() {
+        return appointmentRequest;
+    }
+
+    public void setAppointmentRequest(AppointmentRequest appointmentRequest) {
+        this.appointmentRequest = appointmentRequest;
+    }
+
+    public String getDogOwnerName() {
+        return dogOwnerName;
+    }
+
+    public void setDogOwnerName(String dogOwnerName) {
+        this.dogOwnerName = dogOwnerName;
+    }
+
+    public String getDogOwnerId() {
+        return dogOwnerId;
+    }
+
+    public void setDogOwnerId(String dogOwnerId) {
+        this.dogOwnerId = dogOwnerId;
+    }
 }

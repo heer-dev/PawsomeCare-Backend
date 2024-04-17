@@ -1,33 +1,21 @@
-package com.example.capstone.model;
-
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
+package com.example.capstone.dto;
 
 import java.time.LocalDate;
 
-@Document(collection = "supportInquiries")
-public class SupportInquiry {
-    @Id
+public class SupportInquiryDTO {
     private String id;
     private String email;
     private LocalDate date;
     private String inquiry;
-    private String status;
 
-    // Constructors, Getters, and Setters
-
-
-    public SupportInquiry() {
-    }
-
-    public SupportInquiry(String id, String email, LocalDate date, String inquiry, String status) {
+    public SupportInquiryDTO(String id, String email, LocalDate date, String inquiry) {
         this.id = id;
         this.email = email;
         this.date = date;
         this.inquiry = inquiry;
-        this.status = status;
     }
 
+    // Getters and Setters
     public String getId() {
         return id;
     }
@@ -58,13 +46,5 @@ public class SupportInquiry {
 
     public void setInquiry(String inquiry) {
         this.inquiry = inquiry;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
     }
 }

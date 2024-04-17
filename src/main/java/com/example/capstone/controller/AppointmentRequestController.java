@@ -3,7 +3,6 @@ package com.example.capstone.controller;
 import com.example.capstone.dto.AppointmentRequestDetailsDto;
 import com.example.capstone.model.AppointmentRequest;
 import com.example.capstone.service.AppointmentRequestService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
